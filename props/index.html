@@ -9,11 +9,15 @@
 </head>
 <body>
     <div id = "app">
+        
+        <div :style="{ fontSize: postFontSize + $event }">
         <player v-for="item in players"
                 v-bind:nbaplayer="item"
+                v-on:welcome="postFontSize+=1"
         ></player>
-
     </div>
+    </div>
+</div>
     <script src="index.js"></script>
 </body>
 </html>
