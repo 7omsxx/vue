@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+        <div id="example">
+                <p>Original message: "{{ message }}"</p>
+                <p>Computed reversed message: "{{ reversedMessage }}"</p>
+              </div>
+    <div id = "app">
+        {{message}}
+        {{reverseMessage2}}
+        <span v-if="show">me and you</span>
+        <li v-for = "todo in todos">
+            {{todo.text}}
+        </li>
+        <div v-bind:title="message">
+            鼠标悬停事件
+        </div>
+        <div v-on:click="reverseMessage">
+            reverseMessage
+        </div>
+        <input v-model="message">
+        <li v-for = "item in vagetables">
+            {{item.id}}
+        </li>
+        <span >
+            {{reverseMessage2}}
+        </span>
+        <span >
+                {{now}}
+            </span>
+        
+        <todo-item v-for="item in vagetables" v-bind:todo=item v-bind:key=item.key></todo-item>
+    </div>
+ 
+    <script src="index.js"></script>
+</body>
+</html>
